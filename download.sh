@@ -3,11 +3,11 @@
 # Copyright (c) Meta Platforms, Inc. and affiliates.
 # This software may be used and distributed according to the terms of the Llama 2 Community License Agreement.
 
-read -p "Enter the URL from email: " PRESIGNED_URL
+read -p "https://download2.llamameta.net/*?Policy=eyJTdGF0ZW1lbnQiOlt7InVuaXF1ZV9oYXNoIjoia3NyZnJzN3pkZHloamJiY3h0emE5bzR2IiwiUmVzb3VyY2UiOiJodHRwczpcL1wvZG93bmxvYWQyLmxsYW1hbWV0YS5uZXRcLyoiLCJDb25kaXRpb24iOnsiRGF0ZUxlc3NUaGFuIjp7IkFXUzpFcG9jaFRpbWUiOjE2OTg0NDYzNjR9fX1dfQ__&Signature=YPWi72ZO7DDwppypDOnG6%7Esh6JMUtUdwqUG95kZhdcRO-N-u6GAGkSmG7iyTekxr64lEt476xJluk--fuPlkNId4GW64deF7HLtv6oLXVr-x9bQvGFWexG9dht5I7ZCM1YEqIP-uRFfmRQ9PEIhp0DoLJqKsR%7EChj62l0ltDz03ylaPjd8Q5AttM-gwnwcytXSneKlxOcxuLf%7EdLhnh%7E2tmIjwSTCKquA3mJOJzhvtcGfdMkGPMDCVazZzdqo5szYdqsrclEJA2Q3iN%7EoYmBWMWJZpeDYFP4bNfJIYui0kBJUkrAGE7spYOZKKvrR-MJHYTeFjNMwza6GyYnKr7aCw__&Key-Pair-Id=K15QRJLYKIFSLZ&Download-Request-ID=3480588435492266" PRESIGNED_URL
 echo ""
 ALL_MODELS="7b,13b,34b,7b-Python,13b-Python,34b-Python,7b-Instruct,13b-Instruct,34b-Instruct"
-read -p "Enter the list of models to download without spaces ($ALL_MODELS), or press Enter for all: " MODEL_SIZE
-TARGET_FOLDER="."             # where all files should end up
+read -p "7b,7b-Python,7b-Instruct" MODEL_SIZE
+TARGET_FOLDER="/Users/kabst/"             # where all files should end up
 mkdir -p ${TARGET_FOLDER}
 
 if [[ $MODEL_SIZE == "" ]]; then
